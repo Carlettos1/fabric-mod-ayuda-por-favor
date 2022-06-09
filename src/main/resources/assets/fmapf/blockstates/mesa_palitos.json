@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=east": {
+            "model": "fmapf:block/mesa_palitos",
+            "y": 180
+        },
+        "facing=north": {
+            "model": "fmapf:block/mesa_palitos",
+            "y": 90
+        },
+        "facing=south": {
+            "model": "fmapf:block/mesa_palitos",
+            "y": 270
+        },
+        "facing=west": {
+            "model": "fmapf:block/mesa_palitos"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "BBB",
+        "P P"
+    ],
+    "key": {
+        "P": {
+            "item": "fmapf:palito"
+        },
+        "B": {
+            "item": "fmapf:palito_block"
+        }
+    },
+    "result": {
+        "item": "fmapf:mesa_palitos",
+        "count": 1
+    }
+}

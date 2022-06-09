@@ -1,0 +1,13 @@
+{
+    "type": "fmapf:mesiteo",
+    "stick_count": 1,
+    "ingredients": [
+        {
+            "item": "minecraft:stick"
+        }
+    ],
+    "result": {
+        "item": "fmapf:palito",
+        "count": 4
+    }
+}

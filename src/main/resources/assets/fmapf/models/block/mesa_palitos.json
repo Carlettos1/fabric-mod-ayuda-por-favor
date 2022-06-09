@@ -1,0 +1,85 @@
+{
+    "credit": "Made with Blockbench",
+    "parent": "block/block",
+    "texture_size": [32, 32],
+    "textures": {
+        "0": "fmapf:block/mesa_palitos",
+        "particle": "fmapf:block/mesa_palitos"
+    },
+    "elements": [
+        {
+            "name": "pata2",
+            "from": [2, 0, 7],
+            "to": [4, 6, 9],
+            "rotation": {"angle": 0, "axis": "y", "origin": [3, 3, 8]},
+            "faces": {
+                "north": {"uv": [0, 0, 1, 3], "texture": "#0"},
+                "east": {"uv": [3, 0, 4, 3], "texture": "#0"},
+                "south": {"uv": [2, 0, 3, 3], "texture": "#0"},
+                "west": {"uv": [1, 0, 2, 3], "texture": "#0"},
+                "up": {"uv": [4, 0, 5, 1], "texture": "#0"},
+                "down": {"uv": [5, 0, 6, 1], "texture": "#0"}
+            }
+        },
+        {
+            "name": "pata1",
+            "from": [12, 0, 7],
+            "to": [14, 6, 9],
+            "rotation": {"angle": 0, "axis": "y", "origin": [13, 3, 8]},
+            "faces": {
+                "north": {"uv": [13, 0, 14, 3], "texture": "#0"},
+                "east": {"uv": [14, 0, 15, 3], "texture": "#0"},
+                "south": {"uv": [12, 0, 13, 3], "texture": "#0"},
+                "west": {"uv": [15, 0, 16, 3], "texture": "#0"},
+                "up": {"uv": [11, 0, 12, 1], "texture": "#0"},
+                "down": {"uv": [10, 0, 11, 1], "texture": "#0"}
+            }
+        },
+        {
+            "name": "table",
+            "from": [1, 6, 4],
+            "to": [15, 7, 12],
+            "rotation": {"angle": 0, "axis": "y", "origin": [8, 6.5, 8]},
+            "faces": {
+                "north": {"uv": [7, 15.5, 14, 16], "texture": "#0"},
+                "east": {"uv": [7, 14.5, 11, 15], "texture": "#0"},
+                "south": {"uv": [7, 15, 14, 15.5], "texture": "#0"},
+                "west": {"uv": [7, 14, 11, 14.5], "texture": "#0"},
+                "up": {"uv": [7, 12, 0, 8], "texture": "#0"},
+                "down": {"uv": [7, 12, 0, 16], "texture": "#0"}
+            }
+        }
+    ],
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [-26, 34, 0],
+            "translation": [0, 0.75, 0],
+            "scale": [0.5, 0.5, 0.5]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [-26, 34, 0],
+            "translation": [0, 0.75, 0],
+            "scale": [0.5, 0.5, 0.5]
+        },
+        "gui": {
+            "rotation": [24, -22, 0],
+            "translation": [0, 3.5, 0]
+        },
+        "head": {
+            "translation": [0, 14.5, 0]
+        },
+        "fixed": {
+            "translation": [0, 3.5, 0]
+        }
+    },
+    "groups": [
+        {
+            "name": "mesa",
+            "origin": [8, 8, 8],
+            "color": 0,
+            "nbt": "{}",
+            "armAnimationEnabled": false,
+            "children": [0, 1, 2]
+        }
+    ]
+}

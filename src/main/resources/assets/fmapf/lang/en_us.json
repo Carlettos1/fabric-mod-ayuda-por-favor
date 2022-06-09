@@ -1,0 +1,13 @@
+{
+    "item.fmapf.palito": "palito",
+    "item.fmapf.item.palito.tooltip": "eh un palito",
+    
+    "block.fmapf.palito_block": "palito block",
+    "item.fmapf.palito_block": "palito block",
+    
+    "block.fmapf.mesa_palitos": "mesa de palitos",
+    "item.fmapf.mesa_palitos": "mesa de palitos",
+    
+    "itemGroup.fmapf.general": "gemneral",
+    "fmapf.container.mesita": "mesita"
+}
