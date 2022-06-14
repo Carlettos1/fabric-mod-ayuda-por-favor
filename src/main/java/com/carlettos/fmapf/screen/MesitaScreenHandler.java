@@ -78,7 +78,6 @@ public class MesitaScreenHandler extends ScreenHandler {
             mesitaRecipe = optional.get();
             itemStack = mesitaRecipe.craft(input);
         }
-        //FIXME: en una receta de 1 palito, si hay 2 palitos, se quita de ambos palitos
         output.setStack(0, itemStack);
         handler.setPreviousTrackedSlot(0, itemStack);
         serverPlayerEntity.networkHandler.sendPacket(new ScreenHandlerSlotUpdateS2CPacket(handler.syncId, handler.nextRevision(), 0, itemStack));
@@ -139,7 +138,7 @@ public class MesitaScreenHandler extends ScreenHandler {
 		
 		@Override
 		public boolean canInsert(ItemStack stack) {
-			return stack.isIn(ItemTags.PALITOS_MAGICOS);
+			return stack.isIn(ItemTags.PALITOS);
 		}
 	}
 	

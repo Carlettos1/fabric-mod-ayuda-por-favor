@@ -8,9 +8,15 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ItemTags {
-	public static TagKey<Item> PALITOS_MAGICOS;
+	public static TagKey<Item> PALITOS;
+	public static TagKey<Item> MAGIC_ESSENCE;
+	public static TagKey<Item> MINERAL_ESSENCE;
+	public static TagKey<Item> PALITO_ESSENCE;
 	
 	public static void register() {
-		PALITOS_MAGICOS = TagKey.of(Registry.ITEM_KEY, new Identifier(CarlettosMod.ID, "palitos_magicos"));
+		PALITOS = TagKey.of(Registry.ITEM_KEY, new Identifier(CarlettosMod.ID, "palitos"));
+		MAGIC_ESSENCE = TagKey.of(Registry.ITEM_KEY, new Identifier(CarlettosMod.ID, "magic_essence"));
+		MINERAL_ESSENCE = TagKey.of(Registry.ITEM_KEY, new Identifier(CarlettosMod.ID, "mineral_essence"));
+		PALITO_ESSENCE = TagKey.of(Registry.ITEM_KEY, new Identifier(CarlettosMod.ID, "palito_essence"));
 	}
 }

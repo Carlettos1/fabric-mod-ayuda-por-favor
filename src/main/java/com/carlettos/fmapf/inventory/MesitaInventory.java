@@ -77,6 +77,16 @@ public class MesitaInventory implements Inventory { //RecipeInputProvider
 	public boolean canPlayerUse(PlayerEntity var1) {
 		return true;
 	}
+	
+	public int getStickCount() {
+		var count = 0;
+		for (ItemStack itemStack : stacks.subList(0, 2)) {
+			if (!itemStack.isEmpty()) {
+				count++;
+			}
+		}
+		return count;
+	}
 
 	/*
 	    @Override

@@ -24,11 +24,13 @@ public class Palito extends Item {
 	@Override
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 		user.sendMessage(Text.of("owowo"), false);
+		CarlettosMod.LOGGER.info(user.getMainHandStack().getItem().getEssence().toString());
 		return TypedActionResult.success(user.getStackInHand(hand));
 	}
 	
 	@Override
 	public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
 		tooltip.add(new TranslatableText("item.fmapf.item.palito.tooltip").formatted(Formatting.DARK_AQUA));
+		super.appendTooltip(stack, world, tooltip, context);
 	}
 }

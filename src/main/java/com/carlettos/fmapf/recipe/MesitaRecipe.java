@@ -53,7 +53,7 @@ public class MesitaRecipe implements Recipe<MesitaInventory> {
             ++i;
             recipeMatcher.addInput(itemStack, 1);
         }
-        return this.stickCount <= palitosEnMesa && i == this.input.size() && recipeMatcher.match(this, null);
+        return this.stickCount == palitosEnMesa && i == this.input.size() && recipeMatcher.match(this, null);
     }
 
 	@Override

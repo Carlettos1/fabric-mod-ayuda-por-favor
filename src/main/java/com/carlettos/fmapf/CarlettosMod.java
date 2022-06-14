@@ -3,10 +3,13 @@ package com.carlettos.fmapf;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.carlettos.fmapf.listas.BiomeFeatures;
+import com.carlettos.fmapf.listas.Biomes;
 import com.carlettos.fmapf.listas.BlockEntities;
 import com.carlettos.fmapf.listas.Blocks;
 import com.carlettos.fmapf.listas.ItemTags;
 import com.carlettos.fmapf.listas.Items;
+import com.carlettos.fmapf.listas.OreConfiguredFeatures;
 import com.carlettos.fmapf.listas.RecipeSerializers;
 import com.carlettos.fmapf.listas.RecipeTypes;
 import com.carlettos.fmapf.listas.ScreenHandlers;
@@ -25,7 +28,11 @@ import net.minecraft.util.registry.Registry;
 public class CarlettosMod implements ModInitializer {
 	public static final String ID = "fmapf";
 	public static final Logger LOGGER = LoggerFactory.getLogger(ID);
-	public static final ItemGroup GRUPO = FabricItemGroupBuilder.build(new Identifier(ID, "general"), () -> new ItemStack(net.minecraft.item.Items.PODZOL));
+	public static final ItemGroup GRUPO = FabricItemGroupBuilder.build(new Identifier(ID, "general"), () -> new ItemStack(Items.PALITO));
+	
+	public static void info(Object o) {
+		LOGGER.info(o.toString());
+	}
 
 	@Override
 	public void onInitialize() {
@@ -35,17 +42,25 @@ public class CarlettosMod implements ModInitializer {
 		ItemTags.register();
 		RecipeTypes.register();
 		RecipeSerializers.register();
+		OreConfiguredFeatures.register();
+		OreConfiguredFeatures.Placed.register();
+		Biomes.register();
 		
 		Registry.register(Registry.ITEM, new Identifier(ID, "palito"), Items.PALITO);
 		FuelRegistry.INSTANCE.add(Items.PALITO, 450);
 		CompostingChanceRegistry.INSTANCE.add(Items.PALITO, 0.5F);
+		Registry.register(Registry.ITEM, new Identifier(ID, "magic_dust"), Items.MAGIC_DUST);
 		
 		Registry.register(Registry.BLOCK, new Identifier(ID, "palito_block"), Blocks.PALITO_BLOCK);
 		Registry.register(Registry.ITEM, new Identifier(ID, "palito_block"), Items.PALITO_BLOCK);
-		
+
 		Registry.register(Registry.BLOCK, new Identifier(ID, "mesa_palitos"), Blocks.MESA_PALITOS);
 		Registry.register(Registry.ITEM, new Identifier(ID, "mesa_palitos"), Items.MESA_PALITOS);
 		
+		Registry.register(Registry.BLOCK, new Identifier(ID, "magic_ore"), Blocks.MAGIC_ORE);
+		Registry.register(Registry.ITEM, new Identifier(ID, "magic_ore"), Items.MAGIC_ORE);
+		
 		BlockRenderLayerMap.INSTANCE.putBlock(Blocks.PALITO_BLOCK, RenderLayer.getCutoutMipped());
+		BiomeFeatures.addOres();
 	}
 }

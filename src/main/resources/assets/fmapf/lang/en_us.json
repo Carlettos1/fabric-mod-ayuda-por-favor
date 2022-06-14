@@ -1,6 +1,7 @@
 {
     "item.fmapf.palito": "palito",
     "item.fmapf.item.palito.tooltip": "eh un palito",
+    "item.fmapf.magic_dust": "magic dust",
     
     "block.fmapf.palito_block": "palito block",
     "item.fmapf.palito_block": "palito block",
@@ -8,6 +9,11 @@
     "block.fmapf.mesa_palitos": "mesa de palitos",
     "item.fmapf.mesa_palitos": "mesa de palitos",
     
+    "block.fmapf.magic_ore": "magic ore",
+    "item.fmapf.magic_ore": "magic ore",
+    
     "itemGroup.fmapf.general": "gemneral",
-    "fmapf.container.mesita": "mesita"
+    "fmapf.container.mesita": "mesita",
+    
+    "biome.fmapf.magic_biome": "bioma magico"
 }

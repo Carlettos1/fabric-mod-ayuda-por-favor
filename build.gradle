@@ -48,6 +48,12 @@ java {
 	withSourcesJar()
 }
 
+loom {
+    interfaceInjection {
+        enableDependencyInterfaceInjection = true
+    }
+}
+
 jar {
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}"}
