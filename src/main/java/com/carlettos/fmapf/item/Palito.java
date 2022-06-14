@@ -10,7 +10,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -30,7 +29,7 @@ public class Palito extends Item {
 	
 	@Override
 	public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-		tooltip.add(new TranslatableText("item.fmapf.item.palito.tooltip").formatted(Formatting.DARK_AQUA));
+		tooltip.add(Text.translatable("item.fmapf.item.palito.tooltip").formatted(Formatting.DARK_AQUA));
 		super.appendTooltip(stack, world, tooltip, context);
 	}
 }

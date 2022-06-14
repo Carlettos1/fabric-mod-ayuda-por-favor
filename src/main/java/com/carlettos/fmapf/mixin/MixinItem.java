@@ -17,7 +17,6 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 
@@ -41,7 +40,7 @@ public class MixinItem implements IEssenceGetter {
 	private void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context, CallbackInfo info) {
 		var essence = ((Item)(Object)this).getEssence();
 		if (essence.isPresent()) {
-			tooltip.add(new TranslatableText("fmapf.essence." + essence.get().name().toLowerCase()).formatted(Formatting.GOLD));
+			tooltip.add(Text.translatable("fmapf.essence." + essence.get().name().toLowerCase()).formatted(Formatting.GOLD));
 		}
     }
 }

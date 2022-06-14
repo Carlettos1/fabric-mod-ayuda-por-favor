@@ -36,7 +36,7 @@ public class MagicBiome {
         DefaultBiomeFeatures.addDefaultVegetation(generation);
         
         return new Biome.Builder()
-        		.category(Biome.Category.PLAINS)
+        		.temperatureModifier(Biome.TemperatureModifier.NONE)
         		.precipitation(Biome.Precipitation.RAIN)
         		.downfall(0.8f)
         		.temperature(0.5f)
